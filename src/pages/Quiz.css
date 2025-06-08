@@ -1,0 +1,237 @@
+body {
+  /* Full-page background image */
+  background: url('src/assets/—Pngtree—open red curtains on transparent_20750711.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Flex container to center content */
+.quiz-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Quiz box styling */
+.quiz {
+  background: rgba(0,0,0,0.55);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  padding: 40px 32px;
+  max-width: 500px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-box {
+  background: rgba(24, 24, 24, 0.92);
+  color: #fff;
+  padding: 32px 40px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  font-size: 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.3s, text-shadow 0.3s;
+  cursor: pointer;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  align-content: center;
+}
+
+.question-box:hover {
+  text-shadow:
+    0 0 8px #ffd700,
+    0 0 16px #ffd700,
+    0 0 32px #ff9900;
+  box-shadow:
+    0 0 24px #ffd700,
+    0 0 32px #ff9900;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.options button {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  padding: 18px 0;
+  font-size: 1.15rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.options button:hover {
+  background: #ffd700;
+  color: #222;
+  box-shadow: 0 0 15px #ffd700;
+}
+
+.center-screen {
+  display: flex;
+  justify-content: center;    /* centers horizontally */
+  align-items: center;        /* centers vertically */
+  min-height: 100vh;          /* full viewport height */
+  width: 100vw;               /* full viewport width */
+  box-sizing: border-box;
+}
+
+.back-btn {
+  background: #222;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  margin-left: 0;
+  transition: background 0.2s, color 0.2s;
+}
+.back-btn:disabled {
+  background: #444;
+  color: #aaa;
+  border-color: #aaa;
+  cursor: not-allowed;
+}
+.back-btn:not(:disabled):hover {
+  background: #ffd700;
+  color: #222;
+}
+
+.back-btn-fixed {
+  position: fixed;
+  bottom: 32px;
+  left: 180px; /* or your preferred value */
+  background: #222;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  padding: 6px 16px;      /* Reduced padding */
+  font-size: 0.95rem;     /* Smaller font size */
+  font-weight: 600;
+  z-index: 1001;
+  transition: background 0.2s, color 0.2s;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.back-btn-fixed:disabled {
+  background: #444;
+  color: #aaa;
+  border-color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.back-btn-fixed:not(:disabled):hover {
+  background: #ffd700;
+  color: #222;
+}
+
+.next-btn {
+  background: #ffd700;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.next-btn:disabled {
+  background: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.next-btn:not(:disabled):hover {
+  background: #ffbb00;
+  color: #222;
+}
+
+.option-selected {
+  background: #ffd700 !important;
+  color: #222 !important;
+  border-color: #ffd700 !important;
+}
+
+.back-btn-fixed {
+  position: fixed;
+  bottom: 32px;
+  left: 60px; /* Adjust as needed */
+  background: #222;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  z-index: 1001;
+  transition: background 0.2s, color 0.2s;
+  opacity: 1;
+  cursor: pointer;
+}
+.back-btn-fixed:disabled {
+  background: #444;
+  color: #aaa;
+  border-color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.back-btn-fixed:not(:disabled):hover {
+  background: #ffd700;
+  color: #222;
+}
+
+.next-btn-fixed {
+  position: fixed;
+  bottom: 32px;
+  right: 60px; /* Same as left for back button */
+  background: #222;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  z-index: 1001;
+  transition: background 0.2s, color 0.2s;
+  opacity: 1;
+  cursor: pointer;
+}
+.next-btn-fixed:disabled {
+  background: #444;
+  color: #aaa;
+  border-color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.next-btn-fixed:not(:disabled):hover {
+  background: #ffd700;
+  color: #222;
+}
+
+.option-selected {
+  background: #ffd700 !important;
+  color: #222 !important;
+  border-color: #ffd700 !important;
+}
+

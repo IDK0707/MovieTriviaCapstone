@@ -1,0 +1,68 @@
+/* Container to center content */
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical center */
+  align-items: center;      /* horizontal center */
+  min-height: 100vh;        /* full viewport height */
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.75); /* optional semi-transparent dark background */
+  color: #fff;
+  font-family: 'Poppins', Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+
+  /* Animation */
+  animation: fadeScaleIn 0.8s ease forwards;
+  opacity: 0; /* start invisible */
+  transform: scale(0.8); /* start smaller */
+  text-align: center;
+  border-radius: 16px;
+}
+
+/* Fade and scale animation */
+@keyframes fadeScaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Heading style */
+.result h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  text-shadow:
+    0 0 8px #ffd700,
+    0 0 16px #ffd700;
+}
+
+/* Score paragraph */
+.result p {
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+/* Button styling */
+.result button {
+  background: #ffd700;
+  border: none;
+  padding: 14px 36px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow:
+    0 0 12px #ffd700,
+    0 0 24px #ffbb00;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result button:hover {
+  background: #ffbb00;
+  box-shadow:
+    0 0 20px #ffbb00,
+    0 0 40px #ff9900;
+}
