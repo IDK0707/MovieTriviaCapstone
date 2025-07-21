@@ -1,0 +1,92 @@
+/* src/pages/LoginPage.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  background: url('https://images.unsplash.com/photo-1752689527733-d9cf5e2e0cac?q=80&w=1023&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 320px;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.6);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+.login-note {
+  font-size: 0.85em;
+  color: #ccc;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.login-form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.login-button,
+.signup-button {
+  flex: 1;
+  padding: 0.6em;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-button {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.signup-button {
+  background-color: #10b981;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #2563eb;
+}
+
+.signup-button:hover {
+  background-color: #059669;
+}
